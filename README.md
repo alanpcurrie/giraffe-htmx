@@ -4,6 +4,10 @@
 
 This repository contains an F# Giraffe application with HTMX for frontend interactivity, and open props for styling
 
+Currently the app runs on Azure app service Web apps, connected to neon db serverless postgres service.
+
+[The demo is live at https://giraffe-htmx.azurewebsites.net/](https://giraffe-htmx.azurewebsites.net/)
+
 ## Getting Started
 
 These instructions will get your copy of the project up and running on your local machine for development and testing purposes.

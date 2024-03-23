@@ -1,5 +1,6 @@
 @import "https://unpkg.com/open-props";
 
+
 @layer base, components, utilities, themes, images;
 
 @layer base {
@@ -81,6 +82,5 @@
   .responsive-image {
     max-width: 100%;
     height: auto;
-    display: block;
   }
 }

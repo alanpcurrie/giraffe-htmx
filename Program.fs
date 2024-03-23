@@ -38,7 +38,6 @@ let fetchMasterPlanData (configuration: IConfiguration) () =
         return queryResult |> Seq.tryHead
     }
 
-
 let jsonHandler (configuration: IConfiguration) : HttpHandler =
     fun next ctx ->
         task {
@@ -48,10 +47,6 @@ let jsonHandler (configuration: IConfiguration) : HttpHandler =
             | Some data -> return! json data next ctx
             | None -> return! RequestErrors.NOT_FOUND "Data not found" next ctx
         }
-
-
-
-
 
 let layout pageTitle content =
     html
@@ -90,8 +85,6 @@ let layout pageTitle content =
                       main [ _class "main-content" ] content ]
                 footer [] [ p [] [ encodedText "Footer content here..." ] ] ] ]
 
-
-
 let partial () = h1 [] [ encodedText "backend" ]
 
 let index (masterPlan: MasterPlan option) =
@@ -113,7 +106,6 @@ let indexHandler (configuration: IConfiguration) (name: string) : HttpHandler =
             return! htmlView (index maybeData) next ctx
         }
 
-
 let webApp (configuration: IConfiguration) =
     choose
         [ GET
@@ -122,10 +114,6 @@ let webApp (configuration: IConfiguration) =
                     route "/api/data" >=> jsonHandler configuration
                     routef "/hello/%s" (indexHandler configuration) ]
           setStatusCode 404 >=> text "Not Found" ]
-
-
-
-
 
 let errorHandler (ex: Exception) (logger: ILogger) =
     logger.LogError(ex, "An unhandled exception has occurred while executing the request.")
