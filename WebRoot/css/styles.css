@@ -1,6 +1,6 @@
 @import "https://unpkg.com/open-props";
 
-@layer base, components, utilities, themes;
+@layer base, components, utilities, themes, images;
 
 @layer base {
   body {
@@ -25,6 +25,31 @@
     padding: var(--size-3);
     margin-bottom: var(--size-3);
   }
+  .rad-button {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    padding: var(--size-3) var(--size-4);
+    border-radius: var(--radius-2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: var(--font-bold);
+    font-size: var(--size-4);
+    box-shadow: var(--shadow-2);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+
+  .rad-button:hover,
+  .rad-button:focus {
+    background-color: var(--accent-color-hover); 
+    transform: translateY(-2px);
+    outline: 2px solid var(--blue-3); 
+  }
+
+  .rad-button:active {
+    transform: translateY(1px);
+  }
 }
 
 @layer utilities {
@@ -41,6 +66,7 @@
     --background-color: var(--gray-9);
     --text-color: var(--gray-3);
     --accent-color: var(--pink-6); 
+    --accent-color-hover: var(--pink-5); 
     body {
       background-color: var(--background-color);
       color: var(--text-color);
@@ -48,5 +74,13 @@
     a {
       color: var(--accent-color);
     }
+  }
+}
+
+@layer images {
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 }

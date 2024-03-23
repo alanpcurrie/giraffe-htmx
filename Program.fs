@@ -67,7 +67,10 @@ let layout pageTitle content =
               [ header
                     []
                     [ h1 [] [ encodedText "Giraffe HTMX" ]
-                      img [ _src "/images/logo.WEBP"; _alt "Giraffe HTMX Logo" ] ]
+                      img
+                          [ _src "/images/logo.WEBP"
+                            _alt "Giraffe HTMX Logo"
+                            _class "responsive-image" ] ]
                 div
                     [ _class "container" ]
                     [ aside
@@ -78,7 +81,7 @@ let layout pageTitle content =
                                   li [] [ encodedText "Item 2" ]
                                   li [] [ encodedText "Item 3" ] ] ]
                       button
-                          [ _class "btn btn-primary"
+                          [ _class "rad-button"
                             attr "hx-get" "/api/data"
                             attr "hx-target" "#masterPlanData"
                             attr "hx-trigger" "click" ]
