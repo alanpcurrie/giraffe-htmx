@@ -1,0 +1,52 @@
+@import "https://unpkg.com/open-props";
+
+@layer base, components, utilities, themes;
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background: linear-gradient(45deg, var(--pink-6), var(--indigo-7));
+    color: white;
+  }
+}
+
+@layer components {
+  header, footer {
+    background: linear-gradient(45deg, var(--orange-5), var(--yellow-5));
+    text-align: center;
+    padding: var(--size-4);
+  }
+  .sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .sidebar li {
+    background: rgba(0, 0, 0, 0.5);
+    padding: var(--size-3);
+    margin-bottom: var(--size-3);
+  }
+}
+
+@layer utilities {
+  .text-large {
+    font-size: var(--size-8);
+  }
+  .bold {
+    font-weight: var(--font-bold);
+  }
+}
+
+@layer themes {
+  .theme-dark {
+    --background-color: var(--gray-9);
+    --text-color: var(--gray-3);
+    --accent-color: var(--pink-6); 
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+    a {
+      color: var(--accent-color);
+    }
+  }
+}
