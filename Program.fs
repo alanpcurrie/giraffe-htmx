@@ -30,7 +30,7 @@ let fetchMasterPlanData (configuration: IConfiguration) () =
         let sql =
             """
                 SELECT start_time_utc AS "StartTimeUtc", duration AS "Duration", team AS Team
-                FROM csvs.master_plan
+                FROM master_plan
                 LIMIT 1;
             """
 
@@ -134,7 +134,8 @@ let configureCors (builder: CorsPolicyBuilder) =
             "http://localhost:5000",
             "https://localhost:5001",
             "https://localhost:3000",
-            "https://localhost:4321"
+            "https://localhost:4321",
+            "https://giraffe-htmx.azurewebsites.net"
         )
         .AllowAnyMethod()
         .AllowAnyHeader()
