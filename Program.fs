@@ -54,6 +54,9 @@ let layout pageTitle content =
         [ head
               []
               [ title [] [ encodedText pageTitle ]
+                link [ _rel "preconnect"; _href "https://fonts.googleapis.com" ]
+                link [ _rel "preconnect"; _href "https://fonts.gstatic.com"; _crossorigin "anonymous" ]
+                link [ _rel "stylesheet"; _href "https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" ]
                 link [ _rel "stylesheet"; _href "https://unpkg.com/open-props" ]
                 link [ _rel "stylesheet"; _href "/css/styles.css" ]
                 script [ _src "https://unpkg.com/htmx.org@1.9.11"; _type "text/javascript" ] [] ]
