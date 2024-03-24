@@ -1,11 +1,12 @@
-@import "https://unpkg.com/open-props";
+/* @import "https://unpkg.com/open-props"; */
+/* @import "open-props.min.css"; */
 
 
 @layer base, components, utilities, themes, images;
 
 @layer base {
   body {
-    font-family: var(--font-sans);
+    font-family: "VT323", monospace;
     background: linear-gradient(45deg, var(--pink-6), var(--indigo-7));
     color: white;
   }
@@ -16,6 +17,9 @@
     background: linear-gradient(45deg, var(--orange-5), var(--yellow-5));
     text-align: center;
     padding: var(--size-4);
+  }
+  h1 {
+    font-family: "Press Start 2P", system-ui;
   }
   .sidebar ul {
     list-style-type: none;
