@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "bs": "browser-sync start --proxy localhost:5000 --files WebRoot/*/*.css",
+    "commit": "cz",
     "lint:fix": "stylelint \"**/*.css\" --fix"
   },
   "author": "",
@@ -13,8 +14,15 @@
     "open-props": "^1.6.21"
   },
   "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cz-emoji-conventional": "^1.0.2",
     "stylelint": "^16.3.0",
     "stylelint-config-clean-order": "^5.4.1",
     "stylelint-config-idiomatic-order": "^10.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-emoji-conventional"
+    }
   }
 }
