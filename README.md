@@ -6,7 +6,9 @@ This repository contains an F# Giraffe application with HTMX for frontend intera
 
 Currently the app runs on Azure app service Web apps, connected to neon db serverless postgres service, via dapper ORM, this can be swapped for and database.
 
-[The demo is live at https://giraffe-htmx.azurewebsites.net/](https://giraffe-htmx.azurewebsites.net/)
+## Azure hosted demo
+
+[https://giraffe-htmx.azurewebsites.net/](https://giraffe-htmx.azurewebsites.net/)
 
 ## Getting Started
 
@@ -75,6 +77,12 @@ Before you begin, install:
      ```
 
    This setup provides a development environment where changes to both your F# and CSS files cause the application and styles to update and Css changes reload live in the browser.
+
+## Inspiration for this project
+
+- [Domaing modeling made functional](https://pragprog.com/titles/swdddf/domain-modeling-made-functional/)
+- [Hypermedia Systems (HTMX)](https://hypermedia.systems/book/contents/)
+- [BigmachineL SQL in orbit](https://bigmachine.io/courses/sql-orbit)
 
 ## Usage
 
