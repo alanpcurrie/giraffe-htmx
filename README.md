@@ -36,7 +36,7 @@ Before you begin, install:
    npm install -g browser-sync
    ```
 
-   Optional: to get access to open props intellisense in Vs Code, Open props must be installed as a node module so that the vs code extension 'CSS Var Complete' can refence the variable paths:
+   Optional: to get access to open props intellisense in Vs Code, Open props must be installed as a node module so that the vs code extension 'CSS Var Complete' can reference the variable paths:
 
 ```bash
   // .vscode/settings.json file
