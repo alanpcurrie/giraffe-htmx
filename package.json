@@ -1,0 +1,15 @@
+{
+  "name": "giraffe-htmx",
+  "version": "1.0.0",
+  "description": "an F# Giraffe application with HTMX for frontend interactivity, and open props for styling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bs": "browser-sync start --proxy localhost:5000 --files WebRoot/*/*.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "open-props": "^1.6.21"
+  }
+}

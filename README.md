@@ -4,7 +4,7 @@
 
 This repository contains an F# Giraffe application with HTMX for frontend interactivity, and open props for styling
 
-Currently the app runs on Azure app service Web apps, connected to neon db serverless postgres service.
+Currently the app runs on Azure app service Web apps, connected to neon db serverless postgres service, via dapper ORM, this can be swapped for and database.
 
 [The demo is live at https://giraffe-htmx.azurewebsites.net/](https://giraffe-htmx.azurewebsites.net/)
 
@@ -35,6 +35,28 @@ Before you begin, install:
    ```bash
    npm install -g browser-sync
    ```
+
+   Optional: to get access to open props intellisense in Vs Code, Open props must be installed as a node module so that the vs code extension 'CSS Var Complete' can refence the variable paths:
+
+```bash
+  // .vscode/settings.json file
+  {
+  "cssvar.files": [
+     "./node_modules/open-props/open-props.min.css",
+     // if you have an alternative path to where your styles are located
+     // you can add it in this array of files
+     "assets/styles/variables.css"
+  ],
+
+  // Do not ignore node_modules css files, which is ignored by default
+  "cssvar.ignore": [],
+
+  // add support for autocomplete in JS or JS like files
+  "cssvar.extensions": [
+     "css", "postcss", "jsx", "tsx"
+  ]
+  }
+```
 
 3. **Start the development environment**
 
