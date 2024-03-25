@@ -4,12 +4,17 @@
   "description": "an F# Giraffe application with HTMX for frontend interactivity, and open props for styling",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "bs": "browser-sync start --proxy localhost:5000 --files WebRoot/*/*.css"
+    "bs": "browser-sync start --proxy localhost:5000 --files WebRoot/*/*.css",
+    "lint:fix": "stylelint \"**/*.css\" --fix"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "open-props": "^1.6.21"
+  },
+  "devDependencies": {
+    "stylelint": "^16.3.0",
+    "stylelint-config-clean-order": "^5.4.1",
+    "stylelint-config-idiomatic-order": "^10.0.0"
   }
 }

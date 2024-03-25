@@ -4,7 +4,7 @@
 
 This repository contains an F# Giraffe application with HTMX for frontend interactivity, and open props for styling
 
-Currently the app runs on Azure app service Web apps, connected to neon db serverless postgres service, via dapper ORM, this can be swapped for and database.
+Currently the app runs on Azure app service Web apps, connected to neon db serverless postgres service, via dapper ORM, this can be swapped for any database.
 
 ## Azure hosted demo
 
